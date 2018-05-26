@@ -68,7 +68,7 @@ async function main() {
   // Run benchmarks.
   runBenchmark(1000000000, {
     'js': JSSquarer,
-    'c++': CPP._Z10sumSquaresd,
+    'c++': CPP._Z10sumSquaresi,
     'rust': Rust.SumSquares,
   });
 }

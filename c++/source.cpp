@@ -1,7 +1,7 @@
-double sumSquares(double n) {
+double sumSquares(int n) {
   double total = 0;
-  for (double i=0; i<=n; i++) {
-    total += i * i;
+  for (int i=0; i<=n; i++) {
+    total += (double) i * i;
   }
   return total;
 }

@@ -3,13 +3,13 @@ This repo contains my hello world with Web Assembly and a little square benchmar
 
 Benchmark code is; sum square of numbers within range of 0 to 1000000000.
 
+- System; MacBook Air (13-inch, Early 2014), 1,7 GHz Intel Core i7, 8 GB 1600 MHz DDR3
+
 |Language|Execution Time (ms)|
 |:------:|:------------:|
-|JavaScript|**~1200**|
-|C++|**~1850**|
-|Rust|**~1450**|
-
-I dont know why but JavaScript runs faster than all of them :D
+|JavaScript|**~1100**|
+|C++|**~930**|
+|Rust|**~930**|
 
 Thanks [Berkan Yavri](https://github.com/yavrib) for contributing Rust code.
 
