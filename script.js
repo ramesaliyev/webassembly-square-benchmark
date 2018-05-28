@@ -58,9 +58,10 @@ const JSSquarer = n => {
  */
 async function main() {
   // Load wasms.
-  const [ CPP, Rust ] = await Promise.all([
+  const [ CPP, Rust, ByHand ] = await Promise.all([
     loadAndLogWASM('c++/squarer.wasm'),
-    loadAndLogWASM('rust/squarer.wasm')
+    loadAndLogWASM('rust/squarer.wasm'),
+    loadAndLogWASM('by-hand/squarer.wasm')
   ]);
 
   console.log('');
@@ -70,6 +71,7 @@ async function main() {
     'js': JSSquarer,
     'c++': CPP._Z10sumSquaresi,
     'rust': Rust.SumSquares,
+    'by-hand': ByHand.sumSquares
   });
 }
 

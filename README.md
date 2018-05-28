@@ -7,17 +7,19 @@ Benchmark code is; sum square of numbers within range of 0 to 1,000,000,000 (bil
 
 |Language|Execution Time (ms)|
 |:------:|:------------:|
-|JavaScript|**~1100**|
-|C++|**~930**|
-|Rust|**~930**|
+|Native JavaScript|**~1100**|
+|WASM Written By Hand|**~930**|
+|WASM Compiled From C++|**~930**|
+|WASM Compiled From Rust|**~930**|
 
 - Windows 10 Desktop PC, 4.2 GHz Intel Core i7, 16 GB 3200 MHz DDR4
 
 |Language|Execution Time (ms)|
 |:------:|:------------:|
-|JavaScript|**~920**|
-|C++|**~1110**|
-|Rust|**~1110**|
+|Native JavaScript|**~920**|
+|WASM Written By Hand|**~???**|
+|WASM Compiled From C++|**~1110**|
+|WASM Compiled From RustRust|**~1110**|
 
 Thanks [Berkan Yavri](https://github.com/yavrib) for contributing Rust code and Windows Benchmark.
 
