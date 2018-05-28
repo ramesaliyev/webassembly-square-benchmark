@@ -3,6 +3,7 @@
     (local $sum f64)
     (local $i f64)
     
+    (set_local $value (i32.add (get_local $value) (i32.const 1)))
     (set_local $sum (f64.const 0))
     (set_local $i (f64.const 0))
     

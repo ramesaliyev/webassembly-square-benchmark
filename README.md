@@ -1,10 +1,11 @@
 ## Hello WASM & Little Benchmark
-This repo contains my hello world with Web Assembly and a little square benchmark. I've followed [this article](https://medium.freecodecamp.org/get-started-with-webassembly-using-only-14-lines-of-javascript-b37b6aaca1e4) while creating the base structure.
+This repo contains my hello world with Web Assembly and a little square benchmark.  
+I've followed [this article](https://medium.freecodecamp.org/get-started-with-webassembly-using-only-14-lines-of-javascript-b37b6aaca1e4) while creating the base structure.
 
 You can try it on your own system! [Online Demo](http://ramesaliyev.com/webassembly-square-benchmark/)  
 Benchmark feedbacks are welcome!
 
-Benchmark code is; sum square of numbers within range of 0 to 1,000,000,000 (bilion).
+Benchmark code is; sum square of numbers within range of 0 to 1,000,000,000 (bilion) 10 times.
 
 - MacBook Air (13-inch, Early 2014), 1,7 GHz Intel Core i7, 8 GB 1600 MHz DDR3
 
