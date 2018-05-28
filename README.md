@@ -5,6 +5,8 @@ I've followed [this article](https://medium.freecodecamp.org/get-started-with-we
 You can try it on your own system! [Online Demo](http://ramesaliyev.com/webassembly-square-benchmark/)  
 Benchmark feedbacks are welcome!
 
+![Sample Screenshot](screenshot_sample.png)
+
 Benchmark code is; sum square of numbers within range of 0 to 1,000,000,000 (bilion) 10 times.
 
 - MacBook Air (13-inch, Early 2014), 1,7 GHz Intel Core i7, 8 GB 1600 MHz DDR3
