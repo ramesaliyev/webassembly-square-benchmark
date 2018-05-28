@@ -68,10 +68,12 @@ const runBenchmark = (rangeMax, iteration, funcs) => {
 
     return {
       'Language': lang,
-      'Time (ms)': +averageTime.toFixed(0),
+      'Average Time (ms)': +averageTime.toFixed(0),
       'Result': value
     };
   });
+
+  const allSameResults = results.every(item => item.Result === results[0].Result);
 
   console.clear();
   console.log('Benchmark completed.')
@@ -81,6 +83,7 @@ const runBenchmark = (rangeMax, iteration, funcs) => {
   console.log('');
   console.log('Benchmark results:');
   console.table(results);
+  console.log(allSameResults ? 'All results are equal ✅' : 'All results are not equal ❌');
 };
 
 /**
