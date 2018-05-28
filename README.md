@@ -12,8 +12,8 @@ Benchmark code is; sum square of numbers within range of 0 to 1,000,000,000 (bil
 |:-------|:------------:|
 |Native JavaScript|**~1100**|
 |Wasm Written by Hand|**~930**|
-|C++ -> Wasm|**~930**|
-|Rust -> Wasm|**~930**|
+|C++ Compiled to Wasm|**~930**|
+|Rust Compiled to Wasm|**~930**|
 
 - Windows 10 Desktop PC, 4.2 GHz Intel Core i7, 16 GB 3200 MHz DDR4
 
@@ -21,8 +21,8 @@ Benchmark code is; sum square of numbers within range of 0 to 1,000,000,000 (bil
 |:-------|:------------:|
 |Native JavaScript|**~920**|
 |Wasm Written by Hand|**~???**|
-|C++ -> Wasm|**~1110**|
-|Rust -> Wasm|**~1110**|
+|C++ Compiled to Wasm|**~1110**|
+|Rust Compiled to Wasm|**~1110**|
 
 Thanks [Berkan Yavri](https://github.com/yavrib) for contributing Rust code and Windows Benchmark.
 

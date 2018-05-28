@@ -29,15 +29,24 @@ const loadAndLogWASM = fileName => {
  * Simple benchmark runner.
  */
 const runBenchmark = (iteration, funcs) => {
-  console.log(`Running benchmarks for ${iteration} iterations.`);
+  console.log(`Summing squares of range from 1 to ${iteration}.`);
 
-  Object.keys(funcs).forEach(lang => {
+  const results = [];
+
+  funcs.forEach(([name, func]) => {
     const startTime = performance.now();
-    const result = funcs[lang](iteration);
+    const result = func(iteration);
     const execTime = performance.now() - startTime;
 
-    console.log(lang, +execTime.toFixed(0), 'ms ->', result);
+
+    results.push({
+      'Language': name,
+      'Time (ms)': +execTime.toFixed(0),
+      'Result': result 
+    });
   });
+
+  console.table(results);
 };
 
 /**
@@ -58,21 +67,21 @@ const JSSquarer = n => {
  */
 async function main() {
   // Load wasms.
-  const [ CPP, Rust, ByHand ] = await Promise.all([
+  const [ ByHand, CPP, Rust ] = await Promise.all([
+    loadAndLogWASM('by-hand/squarer.wasm'),
     loadAndLogWASM('c++/squarer.wasm'),
     loadAndLogWASM('rust/squarer.wasm'),
-    loadAndLogWASM('by-hand/squarer.wasm')
   ]);
 
   console.log('');
 
   // Run benchmarks.
-  runBenchmark(1000000000, {
-    'js': JSSquarer,
-    'c++': CPP._Z10sumSquaresi,
-    'rust': Rust.SumSquares,
-    'by-hand': ByHand.sumSquares
-  });
+  runBenchmark(1000000000, [
+    ['Native JavaScript', JSSquarer],
+    ['Wasm Written By Hand', ByHand.sumSquares],
+    ['C++ Compiled to Wasm', CPP._Z10sumSquaresi],
+    ['Rust Compiled to Wasm', Rust.SumSquares],
+  ]);
 }
 
 /**
